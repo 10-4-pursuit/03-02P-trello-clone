@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import CardDetails from "./CardDetails";
+// import CreateCard from "./CreateCard";
+
+import React, { useState, createContext } from "react";
+import CreateListContext from "./CreateListContext";
+
+
+export const CardContext = createContext(null);
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <CardContext.Provider value={{cardData, setCardData}}>
+<div className="App">
+      <nav className="navbar">App bar</nav>
+      <nav className="board">Board</nav>
+      {/* <div className="board-columns">
+
+        <div className="card-container">
+          {cardData.map((card, index) => (
+            <CardDetails card={card} erase={()=> deleteCard(index)} key={index} />
+          ))}
+          <CreateCard className="card" addNewCard={addNewCard} />
+        </div> 
+      </div> */}
+      <div>
+        
+      <CreateListContext />
+      </div>
+      
     </div>
+    // </CardContext.Provider>
+    
   );
 }
 
